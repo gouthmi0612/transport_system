@@ -21,12 +21,41 @@ th{background:#174ea6;color:white}
 <p>Simulated transport data — demonstration only.</p>
 
 <h2>Bus Routes</h2>
+<label for="routeFilter">Filter by route:</label>
+<input id="routeFilter" type="text" placeholder="Enter route number">
 <table>
 <thead><tr>
 <th>Route</th><th>From</th><th>To</th>
 <th>ETA</th><th>Crowd</th><th>Status</th>
 </tr></thead>
 <tbody>
+    <tr class="bus-row">
+        <td>101</td>
+        <td>Central Station</td>
+        <td>Airport</td>
+        <td>5 min</td>
+        <td>Moderate</td>
+        <td>On time</td>
+    </tr>
+
+    <tr class="bus-row">
+        <td>202</td>
+        <td>City Centre</td>
+        <td>University</td>
+        <td>12 min</td>
+        <td>High</td>
+        <td>Delayed</td>
+    </tr>
+
+    <tr class="bus-row">
+        <td>303</td>
+        <td>Market</td>
+        <td>Railway Station</td>
+        <td>8 min</td>
+        <td>Low</td>
+        <td>On time</td>
+    </tr>
+</tbody>
 <tr><td>101</td><td>Central Station</td><td>Airport</td>
 <td>5 min</td><td>Moderate</td><td>On time</td></tr>
 <tr><td>202</td><td>City Centre</td><td>University</td>
@@ -44,5 +73,19 @@ th{background:#174ea6;color:white}
 <p>Please check the displayed arrival estimates before travelling.
 Use alternative stops when a closure is reported.</p>
 </main>
+<script>
+const filter = document.getElementById("routeFilter");
+
+filter.addEventListener("input", function () {
+    const route = filter.value.trim().toLowerCase();
+
+    document.querySelectorAll(".bus-row").forEach(row => {
+        row.style.display =
+            row.cells[0].textContent.toLowerCase().includes(route)
+                ? ""
+                : "none";
+    });
+});
+</script>
 </body>
 </html>
