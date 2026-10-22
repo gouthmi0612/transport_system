@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Public Transport Monitoring</title>
+<style>
+body{font-family:Arial;background:#eef2f7;margin:30px}
+main{max-width:1000px;margin:auto}
+h1{color:#174ea6}
+table{width:100%;background:white;border-collapse:collapse}
+th,td{padding:12px;border:1px solid #ddd;text-align:left}
+th{background:#174ea6;color:white}
+.alert{background:#fff0d6;padding:12px;margin:12px 0}
+</style>
+</head>
+<body>
+<main>
+<h1>Public Transport Monitoring Dashboard</h1>
+<p>Simulated transport data — demonstration only.</p>
+
+<h2>Bus Routes</h2>
+<table>
+<thead><tr>
+<th>Route</th><th>From</th><th>To</th>
+<th>ETA</th><th>Crowd</th><th>Status</th>
+</tr></thead>
+<tbody>
+<tr><td>101</td><td>Central Station</td><td>Airport</td>
+<td>5 min</td><td>Moderate</td><td>On time</td></tr>
+<tr><td>202</td><td>City Centre</td><td>University</td>
+<td>12 min</td><td>High</td><td>Delayed</td></tr>
+<tr><td>303</td><td>Market</td><td>Railway Station</td>
+<td>8 min</td><td>Low</td><td>On time</td></tr>
+</tbody>
+</table>
+
+<h2>Service Disruptions</h2>
+<div class="alert">Route 202: Simulated 10-minute delay.</div>
+<div class="alert">Route 303: Temporary stop closure near Market Road.</div>
+
+<h2>Passenger Advisory</h2>
+<p>Please check the displayed arrival estimates before travelling.
+Use alternative stops when a closure is reported.</p>
+</main>
+</body>
+</html>
